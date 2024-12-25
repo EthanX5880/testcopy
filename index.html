@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="title" content="圣诞快乐">
+	<meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
+	<meta name="describe" content="祝您圣诞快乐，欢迎分享您的圣诞节快乐时光！">
+	<link rel="icon" type="image/x-icon" href="https://example.com/christmas-icon.png">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+		
+		/* 响应式设计 */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		
+		#mainDiv {
+			max-width: 100%;
+			padding: 10px;
+		}
+		
+		#content {
+			text-align: center;
+		}
+		
+		#loveHeart {
+			width: 100%;
+			height: auto;
+		}
+		
+		#words {
+			font-size: 1em;
+		}
+		
+		/* 媒体查询 */
+		@media (max-width: 600px) {
+			#code {
+				font-size: 0.8em;
+			}
+			
+			#messages, #loveu {
+				font-size: 0.9em;
+			}
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="keyword">亲爱的宝贝：</span>
+				<span class="string">今天是圣诞节，也是我们一起度过的第一个圣诞节。❄️</span>
+				<span class="comments">在这个特别的日子里，我想告诉你，你是圣诞老人送给我最美好的礼物。🎁</span>
+				<span class="placeholder">从我们相识、相知到相爱，这一切都如此美好而顺利。💑</span>
+				<span class="string">我们有许多共同的喜好、目标和对未来生活的向往，我对此心存感激。🙏</span>
+				<span class="comments">我希望能一直照顾你，爱护你，尽我所能为你带来温暖，成为你永远可以信赖的后盾。💪</span>
+				<span class="placeholder">最后，我想对你说声抱歉，因为我还欠你一个正式的表白。每当周年纪念日来临时，我都会想起这件事。💝</span>
+				<span class="string">所以，不如我们就把这个我们在一起后的第一个节日定为我们的恋爱纪念日吧，哈哈。😊</span>
+				<span class="comments">我期待着和你一起创造更多美好的回忆，携手走过每一个春夏秋冬。🌸</span>
+				<span class="placeholder">愿我们的未来如这圣诞的灯火般璀璨，愿我们的爱如冬日的阳光般温暖。✨</span>
+				<span class="string">无论未来如何，我都会在你身边，与你共度每一个珍贵的时刻。❤️</span>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						洪瑾, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br />
+						<div class="signature"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright © 2024 <a href='http://yangzixing6688@163.com'>http://yangzixing6688@163.com</a> 2023-2024
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+		together.setFullYear(2024, 11, 25);
+		together.setHours(15);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 1000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 100);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+</html>

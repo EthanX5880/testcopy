@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
     background: #fdc9d1;
-    font-size: 12px;
-    overflow: auto
+    font-size: 18px;
+    overflow: auto;
 }
 
 #mainDiv {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 #loveHeart {
@@ -20,30 +20,30 @@ body {
 
 #garden {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 #elapseClock {
     text-align: right;
     font-size: 18px;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #words {
     font-family: "sans-serif";
     width: 500px;
     font-size: 24px;
-    color: #666
+    color: #666;
 }
 
 #messages {
-    display: none
+    display: none;
 }
 
 #elapseClock .digit {
     font-family: "digit";
-    font-size: 36px
+    font-size: 36px;
 }
 
 #loveu {
@@ -52,7 +52,7 @@ body {
     margin-top: 80px;
     margin-right: 120px;
     text-align: right;
-    display: none
+    display: none;
 }
 
 #loveu .signature {
@@ -61,7 +61,7 @@ body {
 }
 
 #clickSound {
-    display: none
+    display: none;
 }
 
 #code {
@@ -71,35 +71,36 @@ body {
     height: 400px;
     color: #333;
     font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-    font-size: 12px
+    font-size: 18px;
 }
 
 #code .string {
-    color: #2a36ff
+    color: #2a36ff;
 }
 
 #code .keyword {
     color: #7f0055;
-    font-weight: bold
+    font-weight: bold;
 }
 
 #code .placeholder {
-    margin-left: 15px
+    margin-left: 15px;
 }
 
 #code .space {
-    margin-left: 7px
+    margin-left: 7px;
 }
 
 #code .comments {
-    color: #3f7f5f
+    color: #3f7f5f;
+    font-size: 18px;
 }
 
 #copyright {
     margin-top: 40px;
     text-align: center;
     width: 100%;
-    color: #666
+    color: #666;
 }
 
 #errorMsg {
@@ -108,9 +109,9 @@ body {
     font-size: 24px;
     position: absolute;
     top: 100px;
-    left: 0
+    left: 0;
 }
 
 #copyright a {
-    color: #666
+    color: #666;
 }
